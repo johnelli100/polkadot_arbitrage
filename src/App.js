@@ -16,7 +16,7 @@ function App() {
   const [modalOpenBCH, setModalOpenBCH] = useState(false);
   const [modalOpenWaitingForPayment, setModalOpenWaitingForPayment] = useState({wallet: undefined, state: false, coin: undefined});
   const [wallets, setWallets] = useState({LTC: undefined, BCH: undefined});
-  const [ourEmail, setOurEmail] = useState('elyakim');
+  const [ourEmail, setOurEmail] = useState('');
   const [customerWallet, setCustomerWallet] = useState('');
   
   const LTCcanvas = React.createRef();
@@ -35,7 +35,7 @@ function App() {
       if(window.innerWidth<800)setMobile(true);
       else setMobile(false);
     });
-    axios.post('http://10.0.0.11:8080/getdata').then(response=>{
+    axios.post('https://polkadot-arbitrage-backend.herokuapp.com/getdata').then(response=>{
       console.log(response.data);
       setCoinsCountdown(response.data.coinsCountdown);
       setAppliedWallets(response.data.walletsApplied);
