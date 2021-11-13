@@ -29,7 +29,7 @@ function App() {
   }
 
   useEffect(()=>{
-    setOurEmail('miaw');
+    setOurEmail('support@polkadot-arbitrage.com');
     if(window.innerWidth<800)setMobile(true);
     window.addEventListener('resize', ()=>{
       if(window.innerWidth<800)setMobile(true);
