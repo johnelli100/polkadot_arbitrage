@@ -27,7 +27,7 @@ function App() {
     setModalOpenBCH(false);
     setCustomerWallet('');
   }
-
+//e
   useEffect(()=>{
     setOurEmail('support@polkadot-arbitrage.com');
     if(window.innerWidth<800)setMobile(true);
